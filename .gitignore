@@ -1,0 +1,17 @@
+#--------------------------------------------------------------------
+
+# .gitignore file, see http://git-scm.com/docs/gitignore for details
+
+#--------------------------------------------------------------------
+
+# Ignore artifacts of build system
+
+*.log
+*.txt
+*.TXT
+*.csv
+*.CSV
+*.zip
+*.xml
+*.XML
+.idea/

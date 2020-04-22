@@ -1,0 +1,44 @@
+version: "3.2"
+
+services:
+#  php:
+#    container_name: php_certificados
+#    image: php:7.1
+#    environment:
+#      - MYSQL_HOST=mysql
+#      - MYSQL_USER=root
+#      - MYSQL_PASSWORD=rootpassword
+#    networks:
+#      - backend
+#    volumes:
+#      - ./:/var/www/html/
+
+  apache:
+    container_name: apache_certificados
+    build: './docker/apache/'
+    depends_on:
+      - mysql
+    networks:
+      - frontend
+      - backend
+    ports:
+      - "8090:80"
+    volumes:
+      - ./:/var/www/html/
+
+  mysql:
+    container_name: mysql_certificados
+    image: mysql:5.6.40
+    command: --init-file /var/www/html/docker/mysql/init.sql
+    volumes:
+      - ./:/var/www/html/
+    environment:
+      - MYSQL_ROOT_PASSWORD=rootpassword
+    ports:
+      - 6005:3306
+    networks:
+      - backend
+
+networks:
+  frontend:
+  backend:

@@ -1,0 +1,29 @@
+<div class="row">
+    <div id="start" class="col-md-5"></div>
+
+    <div id="middle_login" class="col-md-2">
+        <form data-url="login/validaLogin" method="post" id="login_form">
+            <div class="text-center">
+                <img src="/images/logo.png">
+            </div>
+            <div id="login_error" class="alert alert-danger" style="font-size: small;display: none" role="alert">
+                <center>Usuário não encontrado</center>
+            </div>
+            <div class="form-group text-center">
+                <label for="dado_login">Login</label>
+                <input type="text" class="form-control" id="dado_login" name="dado_login" placeholder="Login..." value="admin">
+            </div>
+            <br>
+            <div class="form-group text-center">
+                <label for="dado_senha">Senha</label>
+                <input type="password" class="form-control" id="dado_senha" name="dado_senha" placeholder="Senha..." value="admin">
+            </div>
+            <br>
+            <div class="text-center">
+                <button type="submit" class="btn btn-primary button-submit-login">Login</button>
+            </div>
+        </form>
+    </div>
+
+    <div id="end" class="col-md-5"></div>
+</div>

@@ -1,0 +1,11 @@
+body {
+    background-image: url("/images/background.jpg");
+}
+
+.mid-content{
+    padding-top: 10%;
+}
+
+.error-msg{
+    background-color: red;
+}
