@@ -10,7 +10,7 @@
 
 </div>
 
-<script type="text/javascript" src="/mvc/views/login/login.js"></script>
-
 </body>
 </html>
+
+<script type="text/javascript" src="/mvc/views/login/login.js"></script>

@@ -1,18 +1,6 @@
 version: "3.2"
 
 services:
-#  php:
-#    container_name: php_certificados
-#    image: php:7.1
-#    environment:
-#      - MYSQL_HOST=mysql
-#      - MYSQL_USER=root
-#      - MYSQL_PASSWORD=rootpassword
-#    networks:
-#      - backend
-#    volumes:
-#      - ./:/var/www/html/
-
   apache:
     container_name: apache_certificados
     build: './docker/apache/'
