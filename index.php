@@ -7,7 +7,7 @@ if (!isset($_SESSION['logado'])) {
 }
 
 if (isset($_SESSION['logado'])) {
-    require __DIR__ . '/mvc/views/certificados/certificados.php';
+    require __DIR__ . '/mvc/views/dashboard/dashboard.php';
     exit();
 }
 

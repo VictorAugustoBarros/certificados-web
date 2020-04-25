@@ -21,6 +21,7 @@ class LoginModel extends Database
         $row = mysqli_fetch_assoc($st);
         if ($row){
             $_SESSION['id'] = $row["id_usuario"];
+            $_SESSION['user'] = $row["login"];
             $_SESSION['adm'] = false;
             $_SESSION['logado'] = true;
 

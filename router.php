@@ -10,6 +10,10 @@ if(!isset($_SESSION['logado']))
 }
 
 switch ($request) {
+    case '/dashboard':
+        require __DIR__ . '/mvc/views/dashboard/dashboard.php';
+        break;
+
     case '/certificados':
         require __DIR__ . '/mvc/views/certificados/certificados.php';
         break;
@@ -32,7 +36,7 @@ switch ($request) {
         break;
 
     case '/':
-        require __DIR__ . '/mvc/views/certificados/certificados.php';
+        require __DIR__ . '/mvc/views/dashboard/dashboard.php';
         break;
 
     default:

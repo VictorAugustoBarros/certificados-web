@@ -4,7 +4,7 @@ CREATE DATABASE certificados_dev;
 USE certificados_dev;
 
 -- ---------------------------------------------------------------------------------------------------------------------
--- Tabela e Dados referente aos USUÁRIOS da faculdade
+-- Tabela e Dados referente aos USUï¿½RIOS da faculdade
 DROP TABLE IF EXISTS certificados_dev.USUARIOS_UNI;
 CREATE TABLE IF NOT EXISTS certificados_dev.USUARIOS_UNI(
   id_usuario int AUTO_INCREMENT PRIMARY KEY,
@@ -13,8 +13,7 @@ CREATE TABLE IF NOT EXISTS certificados_dev.USUARIOS_UNI(
   st_admin VARCHAR(1) DEFAULT 'N' COMMENT 'A -> Admin / N -> Normal'
 );
 
-INSERT INTO USUARIOS_UNI (login, password, st_admin) VALUES ('admin', 'admin', 'A');
-INSERT INTO USUARIOS_UNI (login, password, st_admin) VALUES ('victor', '12345', 'N');
+INSERT INTO USUARIOS_UNI (login, password, st_admin) VALUES ('victor', 'vb@pg', 'A');
 
 -- ---------------------------------------------------------------------------------------------------------------------
 -- Tabela e Dados referente aos CURSOS da faculdade
@@ -22,14 +21,14 @@ DROP TABLE IF EXISTS certificados_dev.CURSOS_UNI;
 CREATE TABLE IF NOT EXISTS certificados_dev.CURSOS_UNI(
   id_curso int AUTO_INCREMENT PRIMARY KEY,
   nm_curso VARCHAR(2000) NOT NULL,
-  ds_turno CHAR(1) NOT NULL COMMENT 'M - Manhã / T - Tarde / N - Noite',
+  ds_turno CHAR(1) NOT NULL COMMENT 'M - Manhï¿½ / T - Tarde / N - Noite',
   hr_inicio TIME NOT NULL,
   hr_fim TIME NOT NULL
 );
 
-INSERT INTO CURSOS_UNI (nm_curso, ds_turno, hr_inicio, hr_fim) VALUES ('Ciência da Computação', 'M', '07:00:00', '12:00:00');
-INSERT INTO CURSOS_UNI (nm_curso, ds_turno, hr_inicio, hr_fim) VALUES ('Ciência da Computação', 'T', '13:00:00', '17:00:00');
-INSERT INTO CURSOS_UNI (nm_curso, ds_turno, hr_inicio, hr_fim) VALUES ('Ciência da Computação', 'N', '18:00:00', '22:00:00');
+INSERT INTO CURSOS_UNI (nm_curso, ds_turno, hr_inicio, hr_fim) VALUES ('CiÃªncia da ComputaÃ§Ã£o', 'M', '07:00:00', '12:00:00');
+INSERT INTO CURSOS_UNI (nm_curso, ds_turno, hr_inicio, hr_fim) VALUES ('CiÃªncia da ComputaÃ§Ã£o', 'T', '13:00:00', '17:00:00');
+INSERT INTO CURSOS_UNI (nm_curso, ds_turno, hr_inicio, hr_fim) VALUES ('CiÃªncia da ComputaÃ§Ã£o', 'N', '18:00:00', '22:00:00');
 
 -- ---------------------------------------------------------------------------------------------------------------------
 -- Tabela referente aos CURSOS ESPECIAIS da faculdade
@@ -44,9 +43,9 @@ CREATE TABLE IF NOT EXISTS certificados_dev.CURSOS_ESPECIAIS_UNI(
 );
 
 INSERT INTO CURSOS_ESPECIAIS_UNI (ds_tema, nm_palestrante, dt_inicio, dt_fim, qnt_horas_complementares)
-VALUES ('PHP Avançado', 'José da Silva', '2020-04-14 17:00:00', '2020-04-14 18:00:00', 20.0);
+VALUES ('PHP AvanÃ§ado', 'JosÃ© da Silva', '2020-04-14 17:00:00', '2020-04-14 18:00:00', 20.0);
 INSERT INTO CURSOS_ESPECIAIS_UNI (ds_tema, nm_palestrante, dt_inicio, dt_fim, qnt_horas_complementares)
-VALUES ('JAVA Avançado', 'Marcos da Silva', '2020-04-14 17:00:00', '2020-04-14 18:00:00', 50.0);
+VALUES ('JAVA AvanÃ§ado', 'Marcos da Silva', '2020-04-14 17:00:00', '2020-04-14 18:00:00', 50.0);
 
 
 -- ---------------------------------------------------------------------------------------------------------------------
@@ -74,9 +73,9 @@ CREATE TABLE IF NOT EXISTS certificados_dev.TURMAS_UNI(
     REFERENCES CURSOS_UNI(id_curso)
 );
 
-INSERT INTO TURMAS_UNI (nm_materia, id_curso) VALUES ('Grafos Básico', 3);
-INSERT INTO TURMAS_UNI (nm_materia, id_curso) VALUES ('Grafos Avançado', 3);
-INSERT INTO TURMAS_UNI (nm_materia, id_curso) VALUES ('Grafos Avançado', 1);
+INSERT INTO TURMAS_UNI (nm_materia, id_curso) VALUES ('Grafos BÃ¡sico', 3);
+INSERT INTO TURMAS_UNI (nm_materia, id_curso) VALUES ('Grafos AvanÃ§ado', 3);
+INSERT INTO TURMAS_UNI (nm_materia, id_curso) VALUES ('Grafos AvanÃ§ado', 1);
 
 
 -- ---------------------------------------------------------------------------------------------------------------------

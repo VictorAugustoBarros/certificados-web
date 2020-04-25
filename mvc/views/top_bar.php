@@ -6,7 +6,8 @@
         <li class="nav-item dropdown no-arrow">
             <a class="nav-link dropdown-toggle" href="#" id="userDropdown" role="button"
                data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                <span class="mr-2 d-none d-lg-inline text-gray-600 small">Victor Augusto</span>
+                <span class="mr-2 d-none d-lg-inline text-gray-600 small"><b
+                            style="padding-right: 10px"><? echo($_SESSION['user']) ?></b></span>
                 <img class="img-profile rounded-circle" src="/images/kirito.jpg">
             </a>
             <!-- Dropdown - User Information -->

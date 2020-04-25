@@ -7,20 +7,20 @@
                 <img src="/images/logo.png">
             </div>
             <div id="login_error" class="alert alert-danger" style="font-size: small;display: none" role="alert">
-                <center>Usu·rio n„o encontrado</center>
+                <center>Usu√°rio n√£o encontrado</center>
             </div>
             <div class="form-group text-center">
                 <label for="dado_login">Login</label>
-                <input type="text" class="form-control" id="dado_login" name="dado_login" placeholder="Login..." value="admin">
+                <input oninput="hideErr()" type="text" class="form-control" id="dado_login" name="dado_login" placeholder="Login">
             </div>
             <br>
             <div class="form-group text-center">
                 <label for="dado_senha">Senha</label>
-                <input type="password" class="form-control" id="dado_senha" name="dado_senha" placeholder="Senha..." value="admin">
+                <input oninput="hideErr()" type="password" class="form-control" id="dado_senha" name="dado_senha" placeholder="Senha">
             </div>
             <br>
             <div class="text-center">
-                <button type="submit" class="btn btn-primary button-submit-login">Login</button>
+                <button onclick="return submitFormLogin();" class="btn btn-primary" id="submitLogin">Cadastrar</button>
             </div>
         </form>
     </div>
