@@ -44,7 +44,11 @@ function btnAdicionar(ref, modal, idReferencia) {
     });
 }
 
-function loadTable(ref, divTable, _validar_delete=false, filtro = {}) {
+function loadTable(ref, divTable, _validar_delete, filtro) {
+    _validar_delete = _validar_delete || false
+    filtro = filtro || {}
+
+
     var view = ref.split("_")[1];
     $('#' + divTable + ' > tbody').html('');
 
