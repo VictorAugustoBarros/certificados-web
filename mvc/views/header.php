@@ -12,6 +12,9 @@
     <script src="/js/jquery.dataTables.js"></script>
     <script src="/js/dataTables.bootstrap4.js"></script>
 
+    <script type="text/javascript" src="/js/bootstrap-notify.js"></script>
+    <script type="text/javascript" src="/js/jquery.dynatable.js"></script>
+
     <!--CSS-->
     <link href="/scss/sb-admin-2.css" rel="stylesheet" type="text/css">
     <link href="/libs/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
@@ -19,4 +22,6 @@
     <link href="/css/jquery.alertable.css" rel="stylesheet"/>
 
     <link href="/css/dataTables.bootstrap4.css" rel="stylesheet">
+
+    <link rel="stylesheet" href="/css/jquery.dynatable.css">
 </head>
