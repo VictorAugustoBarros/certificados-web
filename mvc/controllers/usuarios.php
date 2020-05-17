@@ -26,4 +26,12 @@ class Usuarios
 
         return $result;
     }
+
+    public function validarDelete(){
+        return true;
+    }
+
+    public function all_usuarios(){
+        return true;
+    }
 }
